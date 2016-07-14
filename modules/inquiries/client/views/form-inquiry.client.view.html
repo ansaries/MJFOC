@@ -1,0 +1,59 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.inquiry._id ? 'Edit Inquiry' : 'New Inquiry'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.inquiryForm" class="form-horizontal" ng-submit="vm.save(vm.form.inquiryForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Name</label>
+          <input name="name" type="text" ng-model="vm.inquiry.name" id="name" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.inquiryForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Inquiry name is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="name">Description</label>
+            <input name="description" type="text" ng-model="vm.inquiry.description" id="description" class="form-control" placeholder="Description Please" required>
+            <div ng-messages="vm.form.inquiryForm.description.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Inquiry description is required.</p>
+            </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="makani">Makani #</label>
+            <input name="makani" type="number" ng-model="vm.inquiry.makani" id="makani" class="form-control" placeholder="Enter your makani#" >
+            <div ng-messages="vm.form.inquiryForm.makani.$error" role="alert">
+                <p class="help-block error-text" ng-message="vm.form.inquiryForm.makani.$error">Makani should be a number.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="address">Address</label>
+            <input name="address" type="text" ng-model="vm.inquiry.address" id="address" class="form-control" placeholder="Address">
+            <!--<div ng-messages="vm.form.inquiryForm.address.$error" role="alert">
+                <p class="help-block error-text" ng-message="maxlength">Inquiry description is required.</p>
+            </div>-->
+        </div>
+        <div class="form-group" >
+            <label class="control-label" for="city">City</label>
+            <input name="city" type="text" ng-model="vm.inquiry.city" id="city" class="form-control" placeholder="City" >
+            <!--<div ng-messages="vm.form.inquiryForm.description.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Inquiry description is required.</p>
+            </div>-->
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="state">State</label>
+            <input name="state" type="text" ng-model="vm.inquiry.state" id="state" class="form-control" placeholder="State" required>
+            <!--<div ng-messages="vm.form.inquiryForm.description.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Inquiry description is required.</p>
+            </div>-->
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.inquiry._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
