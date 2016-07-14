@@ -55,7 +55,7 @@ gulp.task('nodemon', function () {
 // Nodemon debug task
 gulp.task('nodemon-debug', function () {
   return plugins.nodemon({
-    exec: 'node_modules/node-inspector/bin/inspector.js --save-live-edit --preload=false --web-port 1337 & node --debug',
+    exec: 'node_modules/node-inspector/bin/inspector.js --save-live-edit --preload=false --web-port 1338 & node --debug',
     script: 'server.js',
     nodeArgs: ['--debug'],
     ext: 'js,html',

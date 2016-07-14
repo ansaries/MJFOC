@@ -1,3 +1,4 @@
+/// <reference path="../../public/lib/PACE/pace.js" />
 'use strict';
 
 module.exports = {
@@ -18,6 +19,10 @@ module.exports = {
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
         'public/lib/angular-file-upload/dist/angular-file-upload.js',
+        'public/lib/jquery/dist/jquery.js',
+        //'public/lib/pace/pace.js',
+        //'public/lib/wow/dist/wow.js',
+        //'public/lib/inspinia/inspinia.js',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js'
         // endbower
       ],

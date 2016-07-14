@@ -12,8 +12,10 @@
 
   function bootstrapConfig($locationProvider, $httpProvider) {
     $locationProvider.html5Mode(true).hashPrefix('!');
-
     $httpProvider.interceptors.push('authInterceptor');
+    
+    $httpProvider.defaults.useXDomain = true;
+
   }
 
   bootstrapConfig.$inject = ['$locationProvider', '$httpProvider'];
