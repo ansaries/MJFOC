@@ -1,14 +1,16 @@
+///</// <reference path="angularjs/angular.d.ts" />
+
 'use strict';
 
 module.exports = {
-  app: {
-    title: 'MEAN.JS',
-    description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
-    keywords: 'mongodb, express, angularjs, node.js, mongoose, passport',
+     app: {
+    title: 'Fix On Click',
+    description: 'Best Service Professional under one roof',
+    keywords: 'Professional, Photographer, Electrician, Event Manager, Expert, Solution Provider',
     googleAnalyticsTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'GOOGLE_ANALYTICS_TRACKING_ID'
   },
-  port: process.env.PORT || 3000,
-  host: process.env.HOST || '0.0.0.0',
+  port: process.env.PORT || 6230,
+  host: process.env.HOST || '192.168.99.153',
   templateEngine: 'swig',
   // Session Cookie settings
   sessionCookie: {
@@ -23,7 +25,7 @@ module.exports = {
     secure: false
   },
   // sessionSecret should be changed for security measures and concerns
-  sessionSecret: process.env.SESSION_SECRET || 'MEAN',
+  sessionSecret: process.env.SESSION_SECRET || 'FOCSECRETFORNOW',
   // sessionKey is set to the generic sessionId key used by PHP applications
   // for obsecurity reasons
   sessionKey: 'sessionId',
@@ -44,6 +46,15 @@ module.exports = {
       limits: {
         fileSize: 1 * 1024 * 1024 // Max file size in bytes (1 MB)
       }
+    },
+    otherFileUpload: {
+    dest: './modules/users/client/img/profile/uploads/', // Profile upload destination path
+    limits: {
+        fileSize: 1 * 1024 * 1024, // Max file size in bytes (1 MB)
+        fileRes: 2000*2000 //Max File Resolution.
+
+      }
     }
+
   }
 };

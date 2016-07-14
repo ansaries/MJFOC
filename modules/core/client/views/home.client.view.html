@@ -13,7 +13,7 @@
     </div>
     <div class="row">
       <p>
-        <a class="btn btn-primary btn-lg" href="http://meanjs.org" target="_blank">Learn more</a>
+        <a class="btn btn-primary btn-lg" ui-sref="authentication.signin" >Learn more</a>
       </p>
     </div>
   </div>
@@ -79,6 +79,16 @@
       </ul>
     </p>
   </div>
-  <br>Enjoy &amp; Keep Us Updated,
-  <br>The MEAN.JS Team.
+ 
+  <div class="col-md-4" ng-repeat="cat in categories">
+    <a href="#">    
+      <img class="img-thumbnail" ng-src= {{"http://192.168.99.153:6280/Temp/Downloads/HostImage_"+cat.pictureId+"-800-0.jpg"}}>
+    </a>
+  </div>
+  <!--<div class="col-md-2" ng-repeat="cat in categories"> 
+    <a href="#"><img class="img-thumbnail" ng-src={{"http://192.168.99.153:6280/HostImages/GetPictureDataById?id="+cat.pictureId+"&fWidth=200&fHeight=0"}}></a>
+  </div>-->
+
+
+  
 </section>
